@@ -23,7 +23,17 @@ The `INSPECT <table_name>` keyword displays all columns of a table along with th
 
 **Example:**
 
-```cmd
+```yml
+isenta> SHOW TABLES
+Tables:
+- USERS
+- ORDERS
+- PRODUCTS
+```
+
+**Example:**
+
+```yml
 isenta> INSPECT USERS
 Table: USERS
 ----------------
