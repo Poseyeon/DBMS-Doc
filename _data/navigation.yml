@@ -1,0 +1,5 @@
+docs:
+  - title: "SQL"
+    url: /sql/
+  - title: "Beyond SQL"
+    url: /beyond-sql/
