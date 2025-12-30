@@ -42,3 +42,40 @@ Column               | Type
 ID                   | INT
 NAME                 | TEXT
 ```
+
+## GET
+
+The `GET <table_name> AS <format>` keyword is used to list all the data from a table in a specified data format. Supported Format is JSON.
+
+**Example:**
+
+```yml
+isenta> GET USERS AS JSON
+{
+  "name": "USERS",
+  "columns": [
+    {
+      "name": "ID",
+      "data_type": "INT"
+    },
+    {
+      "name": "NAME",
+      "data_type": "TEXT"
+    }
+  ],
+  "rows": [
+    {
+      "values": [
+        "1",
+        "John Doe"
+      ]
+    },
+    {
+      "values": [
+        "2",
+        "Jane Doe"
+      ]
+    }
+  ]
+}
+```
