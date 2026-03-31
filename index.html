@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TridentaDB — Rust-Powered Database</title>
+<title>TridentaDB</title>
+<link rel="icon" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -321,7 +322,7 @@
 
   /* STATS RIBBON */
   .stats-ribbon {
-    background: var(--blue-deep);
+    background: var(--white);
     padding: 20px 48px;
     display: flex; align-items: center; justify-content: center;
     gap: 0;
@@ -330,20 +331,20 @@
   .stat-item {
     display: flex; flex-direction: column; align-items: center;
     padding: 0 48px;
-    border-right: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgb(255, 255, 255);
     animation: fadeUp .6s ease both;
   }
   .stat-item:last-child { border-right: none; }
   .stat-num {
     font-size: 2rem; font-weight: 800;
-    color: white; letter-spacing: -0.03em;
+    color: rgb(0, 0, 0); letter-spacing: -0.03em;
     line-height: 1.1;
   }
   .stat-num span { color: var(--blue-glow); }
   .stat-label {
     font-family: var(--font-mono);
     font-size: 0.68rem;
-    color: rgba(255,255,255,0.4);
+    color: rgba(0, 0, 0, 0.4);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-top: 3px;
@@ -905,7 +906,6 @@
 <section class="hero">
   <div class="hero-orb"></div>
   <div class="hero-content">
-    <div class="hero-badge">Built in Rust &nbsp;·&nbsp; v0.1.0 alpha &nbsp;·&nbsp; Cross-Platform</div>
     <h1 class="hero-title">
       The <span class="italic-word">fast</span><br>database you<br>actually want.
     </h1>
@@ -920,34 +920,12 @@
         Explore Features
       </a>
     </div>
-    <div class="hero-terminal">
-      <div class="terminal">
-        <div class="terminal-bar">
-          <div class="terminal-dot"></div>
-          <div class="terminal-dot"></div>
-          <div class="terminal-dot"></div>
-          <span class="terminal-title">tridenta — bash</span>
-        </div>
-        <div class="terminal-body">
-          <div><span class="t-comment"># Clone and build the server</span></div>
-          <div><span class="t-prompt">❯ </span><span class="t-cmd">cargo <span class="t-kw">build</span> --release</span></div>
-          <div><span class="t-out">   Compiling tridentadb v0.1.0 ...</span></div>
-          <div><span class="t-success">   ✓ Finished in 4.2s</span></div>
-          <div>&nbsp;</div>
-          <div><span class="t-comment"># Start the SQL Studio</span></div>
-          <div><span class="t-prompt">❯ </span><span class="t-cmd">npm <span class="t-kw">run</span> <span class="t-str">dev</span></span></div>
-          <div><span class="t-success">   ✓ Tridenta SQL Studio ready on :5173</span></div>
-          <div><span class="t-prompt">❯ </span><span class="t-cursor"></span></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- STATS -->
 <div class="stats-ribbon">
   <div class="stat-item reveal">
-    <span class="stat-num">~<span>2.4</span>M</span>
+    <span class="stat-num"><span>2.4</span>M</span>
     <span class="stat-label">Queries / sec</span>
   </div>
   <div class="stat-item reveal reveal-delay-1">
@@ -1108,38 +1086,6 @@
   </div>
 </div>
 
-<!-- PERFORMANCE -->
-<section class="performance">
-  <span class="section-label reveal" style="display:block">Benchmarks</span>
-  <h2 class="section-title reveal reveal-delay-1" style="margin:0 auto 12px">Performance that <em>speaks.</em></h2>
-  <p class="section-body reveal reveal-delay-2">Measured on a standard 8-core machine. TridentaDB consistently outperforms alternatives thanks to Rust's compile-time optimizations.</p>
-  <div class="perf-bars reveal reveal-delay-2">
-    <div class="perf-bar-wrap">
-      <span class="perf-bar-val" style="color:var(--blue-glow)">2.4M/s</span>
-      <div class="perf-bar perf-bar-tridenta"></div>
-      <span class="perf-bar-label" style="color:var(--blue-glow)">TridentaDB</span>
-    </div>
-    <div class="perf-bar-wrap">
-      <span class="perf-bar-val">1.5M/s</span>
-      <div class="perf-bar perf-bar-b"></div>
-      <span class="perf-bar-label">Competitor A</span>
-    </div>
-    <div class="perf-bar-wrap">
-      <span class="perf-bar-val">980K/s</span>
-      <div class="perf-bar perf-bar-c"></div>
-      <span class="perf-bar-label">Competitor B</span>
-    </div>
-    <div class="perf-bar-wrap">
-      <span class="perf-bar-val">650K/s</span>
-      <div class="perf-bar perf-bar-d"></div>
-      <span class="perf-bar-label">Competitor C</span>
-    </div>
-  </div>
-  <p style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(255,255,255,0.2);margin-top:24px;letter-spacing:0.05em;">
-    * Simulated benchmark data · actual results may vary
-  </p>
-</section>
-
 <!-- STUDIO SHOWCASE -->
 <section class="studio" id="studio">
   <div class="studio-inner">
@@ -1278,23 +1224,23 @@
         <div class="step-num">1</div>
         <div>
           <div class="step-title">Clone the repository</div>
-          <div class="step-code">git clone https://github.com/you/tridentadb</div>
+          <div class="step-code">git clone https://github.com/Poseyeon/TridentaDB</div>
           <div class="step-comment"># then cd into the project directory</div>
         </div>
       </div>
       <div class="install-step reveal reveal-delay-1">
         <div class="step-num">2</div>
         <div>
-          <div class="step-title">Build the server</div>
-          <div class="step-code">cargo build --release</div>
-          <div class="step-comment"># compiles the TridentaDB engine</div>
+          <div class="step-title">Run the server</div>
+          <div class="step-code">cargo run --bin tridenta_db_server</div>
+          <div class="step-comment"># runs the TridentaDB engine</div>
         </div>
       </div>
       <div class="install-step reveal reveal-delay-2">
         <div class="step-num">3</div>
         <div>
           <div class="step-title">Launch SQL Studio</div>
-          <div class="step-code">npm install && npm run dev</div>
+          <div class="step-code">npm start && npm run dev</div>
           <div class="step-comment"># opens the GUI at localhost:5173</div>
         </div>
       </div>
@@ -1302,7 +1248,7 @@
         <div class="step-num">4</div>
         <div>
           <div class="step-title">Connect and query</div>
-          <div class="step-code">./target/release/tridenta-cli connect</div>
+          <div class="step-code">Server listening on 127.0.0.1:5555</div>
           <div class="step-comment"># or use the Studio — you're live!</div>
         </div>
       </div>
@@ -1327,9 +1273,8 @@
     <a href="#">GitHub</a>
     <a href="#">Docs</a>
     <a href="#">Changelog</a>
-    <a href="#">Discord</a>
   </div>
-  <div class="footer-copy">© 2025 TridentaDB · Built with Rust 🦀</div>
+  <div class="footer-copy">© 2025 TridentaDB · Built with Rust</div>
 </footer>
 
 <script>
